@@ -12,5 +12,17 @@ var config = {
 
   firebase.initializeApp(config);
   
-  // Create varibale to reference database
-  var database=firebase.database();
+  // Create variable to reference database
+  var database = firebase.database();
+
+  // Setting a listener on submit to validate form 
+  $("#submit").on("click", function (event) {
+	event.preventDefault();
+
+  
+
+
+
+
+
+}); 
