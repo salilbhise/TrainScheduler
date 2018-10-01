@@ -9,16 +9,16 @@ html, body {
 
 .jumbotron {
     background-image: linear-gradient(to right, #92fe9d , #00c9ff); 
-	text-shadow: 2px 2px 4px #1F2427;
+	text-shadow: 2px 2px 4px #FF00CC;
 	font-family: 'Changa', sans-serif;
 }
 
 .card-header {
-    text-shadow: 2px 2px 4px #1F2427;
+    text-shadow: 2px 2px 4px #FF00CC;
     background-image: linear-gradient(to right, #92fe9d , #00c9ff);
 }
 
 .btn {
-    text-shadow: 2px 2px 4px #1F2427;
+    text-shadow: 2px 2px 4px #FF00CC;
     background: #92fe9d;
 }
