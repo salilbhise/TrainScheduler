@@ -12,6 +12,9 @@ $(document).ready(function () {
 
     firebase.initializeApp(config);
 
+    // Displaying current time new to train schedule 
+    $("#currentTime").html(moment().format("hh:mm a"));
+
     // Create variable to reference database
 
     var database = firebase.database();
