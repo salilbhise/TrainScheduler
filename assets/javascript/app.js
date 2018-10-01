@@ -15,7 +15,7 @@ $(document).ready(function () {
     // Displaying current time new to train schedule 
     $("#currentTime").html(moment().format("hh:mm a"));
 
-    // Create variable to reference database
+    // Create variable to reference database / global variables
 
     var database = firebase.database();
 
@@ -40,6 +40,7 @@ $(document).ready(function () {
         $("#first-train-time").val("");
         $("#frequency-min").val("");
 
+        // Add data to the database
         database.ref().push({
             trainName: trainName,
             destination: dest,
@@ -54,7 +55,7 @@ $(document).ready(function () {
         // Gives the duration in minutes from the beginning of day until first train
         var firstTrainTimeVariable = moment.duration(childSnap.val().firstTrainTime).asMinutes()
 
-        // Current time in hh:mm format
+        // Formats the time
         var timeNow = moment().format("HH:mm");
 
         // Current time in minutes
@@ -75,7 +76,7 @@ $(document).ready(function () {
         // Next train arrival in minutes
         var answer = currentMin + minAway;
 
-        // Function that converts next train arrival minutes to hh:mm a
+        // Function that converts next train arrival minutes to hh:mm 
         function getTimeFromMin(mins) {
             if (mins >= 24 * 60 || mins < 0) {
             }
